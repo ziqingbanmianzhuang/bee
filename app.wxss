@@ -1,0 +1,54 @@
+page {
+  /* 由于 font-family属性具有继承性，这种字体将会应用到 body 元素中的所有元素，除非有一种更特殊的选择器将其覆盖。然 font-family属性具有继承性，但有几个元素不会继承父元素的字体设置，其中有表单的select、textarea 和input 元素。不过，可以强制它们继承父元素的字体设置。代码如下：
+
+input, select, textarea {
+font-family: inherit;
+} */
+  font-family: 
+  -apple-system,
+   BlinkMacSystemFont,
+    'Helvetica Neu',
+     Helvetica,
+    'Segoe UI', 
+    Arial, 
+    Roboto, 
+    'PingFang SC', 
+    'Hiragino Sans GB', 
+    'Microsoft Yahei',
+    sans-serif;
+    /* sans-serif(无衬线)字符笔画末端没有任何细节，外形更简单 */
+    /* //前提：用户的系统安装了需要的字体，否则不会生效 */
+    /* - css-font-family不会侵权这个是直接调用系统中的字体，如果系统中有这个字体，那这个字体版权的所有者已经给该系统授权了，那就是不侵权的。 如果通过@font-face引入微软雅黑的字体文件，那就是侵权的
+
+ */
+    /* //字体文件放到服务端:浏览器访问页面时，页面同时加载该字体文件，这样设置的 font-family 属性才能生效 */
+
+
+}
+page,view,image,input {
+   display: block;
+   /*//img、input属于行内替换元素。height/width/padding/margin均可用。效果等于块元素。 */
+  box-sizing: border-box;
+  /*定义元素宽度和高度的计算方式：它们是否应包含内边距（padding）和边框。
+   默认情况下，元素的宽度和高度是这样计算的：width + padding + border = 元素的实际宽度height + padding + border = 元素的实际高度这意味着：当您设置元素的宽度/高度时，该元素通常看起来比您设置的更大（因为元素的边框和内边距已被添加到元素的指定宽度/高度中）。box-sizing 属性允许我们在元素的总宽度和高度中包括内边距和边框。如果在元素上设置了 box-sizing: border-box;，则宽度和高度会包括内边距和边框： */
+}
+.badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+  width: 38rpx;
+  /* 把所有的设备的屏幕在宽度上等分为750份，即当前屏幕的总宽度为750rpx
+  在开发时，以iphone6作为视觉稿的标准，1rpx=0.5px, */
+  height: 38rpx;
+  line-height: 38rpx;
+  color: #fff;
+  font-size: 20rpx;
+  text-align: center;
+  background-color: #e64340;
+  border: 1rpx solid #fff;
+  border-radius: 50%;
+}
+.block-btn {
+  padding: 0 32rpx;
+}
